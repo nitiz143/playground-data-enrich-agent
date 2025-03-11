@@ -1,0 +1,56 @@
+{
+  "name": "playground-data-enrich-agent",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/index.js",
+  "type": "module",
+  "scripts": {
+    "dev": "tsx watch src/index.ts",
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "lint": "eslint src --ext .ts",
+    "format": "prettier --write \"src/**/*.ts\"",
+    "test": "vitest",
+    "coverage": "vitest run --coverage",
+    "clean": "rimraf dist"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@llamaindex/core": "^0.5.1",
+    "@llamaindex/env": "^0.1.28",
+    "@llamaindex/readers": "^2.0.1",
+    "@llamaindex/workflow": "^0.0.10",
+    "@types/html-to-text": "^9.0.4",
+    "chromadb": "^1.10.4",
+    "chromadb-default-embed": "^2.13.2",
+    "html-to-text": "^9.0.5",
+    "jsonrepair": "^3.12.0",
+    "llamaindex": "^0.9.1",
+    "ollama": "^0.5.13",
+    "puppeteer": "^24.2.1",
+    "puppeteer-core": "^24.2.1"
+  },
+  "devDependencies": {
+    "@aws-crypto/sha256-js": "^5.2.0",
+    "@types/node": "^22.13.1",
+    "@typescript-eslint/eslint-plugin": "^8.24.0",
+    "@typescript-eslint/parser": "^8.24.0",
+    "dotenv": "^16.4.7",
+    "eslint": "^9.20.1",
+    "pathe": "^2.0.3",
+    "prettier": "^3.5.0",
+    "ts-node": "^10.9.2",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.3"
+  },
+  "pnpm": {
+    "ignoredBuiltDependencies": [
+      "esbuild",
+      "protobufjs",
+      "puppeteer",
+      "sharp"
+    ]
+  }
+}
